@@ -1,27 +1,5 @@
-/**
- * Created by jirisedlacek on 10.01.18.
- */
-/* global mediaWiki, jQuery */
+jQuery(document).ready ( function() {
+    $('<span>&nbsp;<span><a href="https://tools.wmflabs.org/csfd/film/'+$('#P2529 a.wb-external-id').text()+'">Quickstatements CSFD link</a>').insertAfter('#P2529 a.wb-external-id');
+});
 
-var wol = window.onload;
-window.onload = function () {
-    if (typeof wol === 'function') wol();
 
-    (function (mw, $) {
-        var entityId = mw.config.get('wbEntityId');
-        if (!entityId) {
-            return;
-        }
-
-        mw.loader.using(['mediawiki.util']).then(function () {
-            var portletLink = mw.util.addPortletLink(
-                'p-tb',
-                '//tools.wikimedia.org/film/'+entityId,
-                'CSFD Quickstatements link',
-                'csfd-link',
-                'Získá Quickstatements link s herci z ČSFD'
-            );
-
-        });
-    })(mediaWiki, jQuery);
-};
