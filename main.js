@@ -15,13 +15,10 @@ window.onload = function () {
 
         mw.loader.using(['mediawiki.util']).then(function () {
             var portletLink = mw.util.addPortletLink(
-                'p-tb',
+                'csfd-tb',
                 '//tools.wikimedia.org/film/'+entityId,
-                // TODO: i18n in this loader
-                // msgs.portletlink,
                 'CSFD Quickstatements link',
-                'sbt-portletlink',
-                // msgs.portlettooltip
+                'csfd-link',
                 'Získá Quickstatements link s herci z ČSFD'
             );
 
