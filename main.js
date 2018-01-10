@@ -15,7 +15,7 @@ window.onload = function () {
 
         mw.loader.using(['mediawiki.util']).then(function () {
             var portletLink = mw.util.addPortletLink(
-                'csfd-tb',
+                'p-tb',
                 '//tools.wikimedia.org/film/'+entityId,
                 'CSFD Quickstatements link',
                 'csfd-link',
